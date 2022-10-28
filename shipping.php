@@ -56,6 +56,7 @@
     <link rel="stylesheet" href="shipping.css">
     <link rel = "icon" href ="Box Delivery Services.png" type="image/x-icon">
     <title>Shipping | จัดส่งพัสดุ</title>
+
 </head>
 <body>
     <header>
@@ -69,14 +70,11 @@
             </ul>
         </div>
     </header> 
-    
     <div class="page" style="margin-top:8%;line-height: 50px;">
-    <form action="<?php echo($_SERVER["PHP_SELF"]);?>" method="post" class="form-floating1">
+    <form action="insertData.php" method="post" class="form-floating1">
 <div class="container1" >    
 <h4><p>ข้อมูลผู้จัดส่ง</p></h4>
 </div>
-    <input type="text" class="form-control" name="Trackingno" id="Trackingno" placeholder="Tracking number"  value="<?php echo $Trackno; ?>" readonly style="font-size: 1.3rem; width:35%;height:40px;color: green;">
-    <p></p>
     <input type="text" class="form-control" name="Sname" id="" placeholder="Name" style="font-size: 1.1rem; width:35%;height:40px">
     <p></p>
     <input type="text" class="form-control" name="cid" id="" placeholder="ID card number" style="font-size: 1.1rem;width:35%;height:40px">
@@ -99,6 +97,15 @@
 <input type="text" class="form-control" name="Rphoneno" id=""placeholder="Phone number" style="font-size: 1.1rem;width:35%;height:40px">
 <p></p>
 <input type="submit" value="SAVE" class="btn btn-success" style="font-size:1.2rem;width:15%;background-color:#333; color:white; border:none; border-radius: 4px; border-width: 1px;cursor: pointer;">
+
+
+<div>
+<form action="<?php echo($_SERVER["PHP_SELF"]);?>" method="post" class="form-floating2">
+    <input type="text" class="form-control" name="Trackingno" id="Trackingno" placeholder="Tracking number"  value="<?php echo $Trackno; ?>" readonly style="font-size: 1.3rem; width:35%;height:40px;color: green;">
+    <p></p>
+    </form>
+</div>
+
 </form>
 </div>
 

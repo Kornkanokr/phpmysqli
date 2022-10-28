@@ -86,3 +86,6 @@ header ul li a:hover::before
     outline: none;
     border: none;
 }
+.form-floating2{
+    margin-top: 10%;
+}
