@@ -14,7 +14,7 @@ $Raddress = $_POST["Raddress"];
 $Rphoneno = $_POST["Rphoneno"];
 
 //บันทึกข้อมูล
-$sql = "INSERT INTO shipping(Sname,cid,Saddress,Sphoneno,date,Rname,Raddress,Rphoneno) VALUES('$Sname','$cid','$Saddress','$Sphoneno','$date','$Rname','$Raddress','$Rphoneno')";
+$sql = "INSERT INTO trackno(Sname,cid,Saddress,Sphoneno,date,Rname,Raddress,Rphoneno) VALUES('$Sname','$cid','$Saddress','$Sphoneno','$date','$Rname','$Raddress','$Rphoneno')";
 
 $result = mysqli_query($connect,$sql); //รันคำสั่ง sql
 

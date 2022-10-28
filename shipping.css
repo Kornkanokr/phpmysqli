@@ -69,13 +69,20 @@ header ul li a:hover::before
     transform-origin: left;
 }
 .page{
-    max-width: 50rem;
-    margin-top: 8%;
-    margin-left: 20%;
-    font-size: 1.2rem;
-    line-height: 1.3cm;
+    position: relative;
+    margin-top: 10%;
+    margin-left: 15%;
+    font-size: 1.5rem;
+    line-height: 50px;
 }
 .image1{
     margin-top: -25%;
     margin-left: 65%;
+}
+.form-control{
+    border-color: #fff;
+    background: #fff;
+    box-shadow: 0 15px 15px rgba(0,0,0,0.05);
+    outline: none;
+    border: none;
 }

@@ -1,3 +1,14 @@
+<?php 
+require('dbconnect.php');
+
+$Trackingno = $_POST["Trackingno"]; // เลขแทรก
+
+$sql = "SELECT * FROM trackno WHERE Trackingno LIKE '%$Trackingno%' ORDER BY Trackingno ASC";
+
+$result=mysqli_query($connect,$sql);
+$count=mysqli_num_rows($result);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +31,9 @@
         </div>
     </header>
     <div class="container">
-        <form>
+        <form action="searchdata.php" method="POST">
             <ion-icon name="search-outline" class="search-icon"></ion-icon>
-            <input type="text" placeholder="กรุณากรอกเลขพัสดุของคุณ">
+            <input type="text" placeholder="กรุณากรอกเลขพัสดุของคุณ" name="Trackingno">
             <button type="submit">ตรวจเช็คพัสดุ</button>
         </form>
     </div>

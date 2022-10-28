@@ -1,3 +1,14 @@
+<?php 
+require('dbconnect.php');
+
+$cid = $_POST["cid"]; // เลขแทรก
+
+$sql = "SELECT * FROM trackno WHERE Trackingno LIKE '%$cid%' ORDER BY Trackingno ASC";
+
+$result=mysqli_query($connect,$sql);
+$count=mysqli_num_rows($result);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +20,7 @@
     <title>Track & Trace | กรอกเลขพัสดุ เช็คสถานะพัสดุ</title>
 </head>
     <header>
-        <a href="index.html" class="logo">KPT Express</a>
+        <a href="index.php" class="logo">KPT Express</a>
         <div class="group">
             <ul class="navigation">
                 <li><a href="index.php">Home</a></li>
@@ -19,6 +30,13 @@
             </ul>
         </div>
     </header>
+    <div class="container">
+        <form action="showdata.php" method="POST">
+            <ion-icon name="search-outline" class="search-icon"></ion-icon>
+            <input type="text" placeholder="กรุณากรอกเลขบัตรประชาชน13หลัก" name="cid">
+            <button type="submit">ค้นหาประวัติการจัดส่ง</button>
+        </form>
+    </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
